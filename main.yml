@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - apt:
+      pkg: wget
+
+  - shell: wget -qO- https://get.docker.com/ | sh
