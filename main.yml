@@ -4,4 +4,18 @@
   - apt:
       pkg: wget
 
+  - group:
+      name: docker
+
+  - copy:
+      src: dockin
+      dest: /bin/dockin
+      mode: 0755
+
+  - user:
+      name: test
+      shell: /bin/dockin
+      createhome: no
+      password: $6$ng0V5KJ5Rmv3p5R$oU9hdPmriaXo14OPzgkGwr/0CPF4wJpcEFwtlNr51Rtu7SaYOzcZnLkv9aNluboDq9FQ.yX3y/tn648Mg.G3l0
+
   - shell: wget -qO- https://get.docker.com/ | sh
