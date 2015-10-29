@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -it busybox
+docker run -it baserock/14.29 /bin/sh
