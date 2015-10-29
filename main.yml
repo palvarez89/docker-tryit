@@ -12,7 +12,8 @@
       dest: /bin/dockin
       mode: 0755
 
-  - user:
+  - name: Create user test/test
+    user:
       name: test
       shell: /bin/dockin
       createhome: no
